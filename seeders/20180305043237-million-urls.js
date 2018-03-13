@@ -2,8 +2,10 @@ const md5 = require('md5');
 
 const millionUrls = [];
 
+console.log('generating million entries...');
+
 for (let i = 0; millionUrls.length < 1000000; i += 1) {
-  const url = `looooooooooooooooooooooooooooooooooooooooooooooooooooongurl${i}`;
+  const url = `http://looooooooooooooooooooooooooooooooooooooooooooooooooooongurl${i}`;
   const surl = md5(url).slice(0, 6).toString();
 
   if (!millionUrls[surl] && isNaN(surl)) {
@@ -19,7 +21,7 @@ for (let i = 0; millionUrls.length < 1000000; i += 1) {
   }
 }
 
-console.log(millionUrls.length);
+global.console.log('complete: generated million entries: storing in db...');
 
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.bulkInsert('urls', millionUrls, {}),

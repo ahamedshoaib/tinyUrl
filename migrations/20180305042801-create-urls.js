@@ -14,7 +14,6 @@ module.exports = {
     longUrl: {
       type: Sequelize.STRING,
       allowNull: false,
-      unique: true,
     },
     createdAt: {
       allowNull: false,

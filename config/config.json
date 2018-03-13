@@ -4,7 +4,12 @@
     "password": null,
     "database": "devops_development",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "pool": {
+      "max": 10,
+      "min": 5,
+      "idle": 10000
+    }
   },
   "test": {
     "username": "ahamedshoaib",
@@ -17,6 +22,13 @@
     "username": "ahamedshoaib",
     "password": null,
     "database": "devops_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "ci_test": {
+    "username": "postgres",
+    "password": "root",
+    "database": "tiny_url_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

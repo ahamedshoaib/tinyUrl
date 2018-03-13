@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon ./server.js",
-    "test": "jest"
+    "start": "nodemon ./server.js",
+    "test": "jest ",
+    "coverage": "NODE_ENV=test jest --coverage --forceExit"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +19,13 @@
     "sequelize-cli": "^3.2.0"
   },
   "dependencies": {
+    "good": "^7.3.0",
+    "good-console": "^6.4.1",
+    "good-squeeze": "^5.0.2",
     "hapi": "^16.6.2",
     "md5": "^2.2.1",
     "pg": "^6.4.2",
+    "redis": "^2.8.0",
     "sequelize": "^4.32.6"
   }
 }
