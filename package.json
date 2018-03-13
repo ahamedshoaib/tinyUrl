@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./server.js",
     "test": "jest ",
-    "coverage": "NODE_ENV=test jest --coverage --forceExit"
+    "coverage": "NODE_ENV=test jest --coverage --forceExit",
+    "ci_test": "NODE_ENV=ci_test sequelize db:migrate:undo:all && NODE_ENV=ci_test sequelize db:migrate && NODE_ENV=ci_test jest --coverage --runInBand --forceExit"
   },
   "author": "",
   "license": "ISC",
